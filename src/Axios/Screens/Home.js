@@ -18,6 +18,13 @@ export default function Home(){
             </a> </li>
             </ul>
 
+            <ul>
+            <p>day-2</p>
+                <li> <a  href="./redux">
+              Redux
+            </a> </li>
+            </ul>
+
             
         </div>
             

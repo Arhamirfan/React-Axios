@@ -26,6 +26,9 @@ export default function Navigationbar() {
             <a class="nav-link" href="./axiosclass">
               Axios Class
             </a>
+            <a class="nav-link" href="./redux">
+              Redux
+            </a>
             
           
           </div>
