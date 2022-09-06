@@ -1,5 +1,5 @@
 import React, { Link } from "react";
-import Navigationbar from "./Navigation";
+import Navigationbar from "../Navigations/Navigation";
 export default function Home(){
 
     return(

@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-import AxiosFunction from "./day1_axios/functional/AxiosFunction";
-import AxiosClass from "./day1_axios/class/AxiosClass";
+import AxiosFunction from "./Axios/Screens/Day1_Axios/functional/AxiosFunction";
+import AxiosClass from "./Axios/Screens/Day1_Axios/class/AxiosClass";
 import { Route, Routes } from "react-router-dom";
-import AxiosUser from "./day1_axios/functional/AxiosUser";
-import Home from "./day1_axios/Home";
-import NewUser from "./day1_axios/functional/NewUser";
+import AxiosUser from "./Axios/Screens/Day1_Axios/functional/AxiosUser";
+import Home from "./Axios/Screens/Home";
+import NewUser from "./Axios/Screens/Day1_Axios/functional/NewUser";
 function App() {
   return (
     <>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import axios from "../axios";
+import axios from "../../../Model/axios";
 import { useNavigate  } from "react-router-dom";
 const userSchema = Yup.object().shape({
   userId: Yup.number()
