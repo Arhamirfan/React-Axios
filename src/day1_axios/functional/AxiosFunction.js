@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
-import AxiosUser from "./AxiosUser";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function AxiosFunction() {
@@ -8,7 +7,7 @@ export default function AxiosFunction() {
   const [isError, setIsError] = useState();
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get("/users")
+    axios.get("/posts")
     .then((res) => {
       setMyData(res.data);
     })
@@ -18,17 +17,34 @@ export default function AxiosFunction() {
     } );
   }, []);
 
+
+  const deleteUser = async (id) =>{
+    axios.delete(`/posts/${id}`).then( (res)=>{
+      alert('successfully deleted: '+ res);
+    } ).catch( (err)=>{
+      alert('error: '+ err);
+    } )
+  } 
+
   return (
     <>
-      <h2>Axios Function</h2>
+ 
 
-      <table>
+      <div className="container" style={{marginTop:50}}>
+      <h2 >Axios Function</h2>
+      <Link to="/newuser">
+      <button className="btn btn-primary">Add a User</button>
+      </Link>
+
+      <table className="table table-striped">
         <thead>
           <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Show Data</td>
+            <th scope="col">User ID</th>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+            <th scope="col">Show Data</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
 
@@ -36,36 +52,36 @@ export default function AxiosFunction() {
         {isError !== "" && <tr><td><h2>{isError}</h2></td></tr>}
           {myData.map((post) => {
             const {
+              userId,
               id,
-              address,
-              email,
-              name,
-              phone,
-              username,
-              website,
-              company,
+              title,
+              body,
             } = post;
 
             return (
               <tr key={id}>
+                <td >{userId}</td>
                 <td>{id}</td>
-                <td>{name}</td>
-                <td>{email}</td>
+                <td>{title}</td>
+                <td>{body}</td>
                 <td>
-                  {" "}
-                  <button
+                  <button className="btn btn-success"
                     onClick={() => {
                         navigate(`/post/${post.id}`)
                     }}
                   >
                     Show
-                  </button>{" "}
+                  </button>
                 </td>
+                <td> <button className="btn btn-danger" onClick={ ()=>{deleteUser(id)} }>Delete</button> </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+
+      </div>
+      
     </>
   );
 }
