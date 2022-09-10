@@ -23,7 +23,7 @@ export default function WApp() {
     <>
       <div className="ui container">
         <br />
-        {/* <Search /> */}
+        <Search />
         <Dropdown
           selected={selected}
           onSelectedChange={setSelected}

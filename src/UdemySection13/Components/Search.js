@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const api =
-  "https://www.mediawiki.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=programming";
+// const api =
+//   "https://www.mediawiki.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=programming";
 
 export default function Search() {
   const [term, setTerm] = useState("");
