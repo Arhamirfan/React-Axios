@@ -8,6 +8,10 @@ import ReduxApp from "./reactRedux/ReduxApp";
 import Uapp from "./Udemy/Uapp";
 import USapp from "./UdemySection12/USapp";
 import WApp from "./UdemySection13/WApp";
+//import Route from "./Common/Route";
+import Index from "./UdemySection21/index";
+import Portalindex from "./UdemySection25";
+import ContextIndex from "./UdemySection27";
 function App() {
   return (
     <>
@@ -21,6 +25,10 @@ function App() {
         <Route path="/uapp" element={<Uapp />} />
         <Route path="/usapp" element={<USapp />} />
         <Route path="/wikipedia" element={<WApp />} />
+        <Route path="/redux" element={<ReduxApp />} />
+        <Route path="/streamy" element={<Index />} />
+        <Route path="/portal" element={<Portalindex />} />
+        <Route path="/context" element={<ContextIndex />} />
       </Routes>
     </>
   );

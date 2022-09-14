@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../UdemySection25";
 import Accordion from "./components/Accordion";
 
 const items = [

@@ -53,6 +53,22 @@ export default function Home() {
             <a href="./wikipedia">Udemy section-13 Wikipedia</a>{" "}
           </li>
         </ul>
+
+        <ul>
+          <p>Week-2</p>
+          <li>
+            <a href="./redux">Udemy section-17 Redux</a>{" "}
+          </li>
+          <li>
+            <a href="./streamy">Udemy section-21 Google API Streamy</a>{" "}
+          </li>
+          <li>
+            <a href="./portal">Udemy section-25 Portal</a>{" "}
+          </li>
+          <li>
+            <a href="./context">Udemy section-27 Context</a>{" "}
+          </li>
+        </ul>
       </div>
     </>
   );
